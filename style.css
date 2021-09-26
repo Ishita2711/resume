@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+body::after{
+    content: "";
+    background: radial-gradient(#ff0, #fff);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    clip-path: circle(30% at right 0%);
+}
+body::before{
+    content: "";
+    background: radial-gradient(#0ff, #fff);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    clip-path: circle(20% at left 90%);
+}
+.container{
+    background: #ffffff62;
+    box-shadow: 0 0 0.5rem 0.5rem rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    border-radius: 0.7rem;
+    border: solid #000;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+.heading{
+    text-align: center;
+    text-decoration: underline;
+}
+.upper{
+    margin: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+.upper img{
+    width: 8rem;
+    border-radius: 0.2rem;
+    border: solid 0.1rem;
+    box-shadow: 0 0.2rem 0.5rem 0.1rem #00000075;
+}
+.upper ul{
+    margin-inline: 1rem;
+    list-style-type: none;
+    font-weight: bold;
+}
+.education{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.education table{
+    width: 90%;
+    padding: 0.5rem;
+}
+.education table tr{
+    transition: all 0.2s;
+}
+.education .fix:hover{
+    transform: none;
+    background: none;
+}
+.education table tr:hover{
+    transform: scale(1.1);
+    background: #0000003f;
+    cursor: pointer;
+}
+.education table{
+    border: solid;
+    border-radius: 0.3rem;
+}
+.education table td, .education table th{
+    border: solid 0.1rem #918383;
+    text-align: center;
+    padding-block: 0.5rem;
+    border-radius: 0.3rem;
+}
+.skills{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+.skills ul{
+    list-style-type: none;
+}
+.skills ul li{
+    display: inline-block;
+    margin: 0.2rem;
+    padding: 0.5rem;
+    background:#b9ecec;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all .2s;
+    border: solid transparent 0.1rem;
+}
+.skills ul li:hover{
+    transform: scale(1.2);
+    transition: all .2s;
+    z-index: 2;
+    border: solid 0.1rem #6d7e7e;
+}
+.certs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.certs ul{
+    list-style-type: none;
+}
+.certs ul li{
+    display: inline-block;
+    margin: 0.2rem;
+    cursor: pointer;
+    transition: all .2s;
+}
+.certs ul li:hover{
+    transform: scale(1.2);
+    transition: all .2s;
+    z-index: 2;
+}
+.certs ul li img{
+    width: 25rem;
+    border-radius: 0.5rem;
+}
+@media screen and (max-width:448px) {
+    .upper ul{
+        font-size: small;
+        font-weight: bold;
+    }
+    .certs ul li img{
+        width: 20rem;
+        border-radius: 0.5rem;
+    }
+}
